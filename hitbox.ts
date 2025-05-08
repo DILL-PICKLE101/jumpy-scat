@@ -261,7 +261,7 @@ define updateJumpAndFallFlags()
       }
     }
   }
-  set previousFrameYPosition to y                                  // For use in the next frame
+  set previousFrameYPosition to y position                                 // For use in the next frame
 }
 
 ////////////////////////////////////////////////////////////////////////////////
