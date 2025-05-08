@@ -232,7 +232,7 @@ define applyGravityToVerticalSpeed()
 define updateJumpAndFallFlags()
 {
   // Determine whether hitbox is rising
-  if (y position> previousFrameYPosition)                                  // Hitbox is higher than before
+  if (y position > previousFrameYPosition)                                  // Hitbox is higher than before
   {
     set isRising to true
     set isFalling to false
