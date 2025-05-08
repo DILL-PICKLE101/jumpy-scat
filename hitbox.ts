@@ -241,7 +241,7 @@ define updateJumpAndFallFlags()
   else                                                             // Hitbox is not higher than before
   {
     // Determine whether hitbox is falling or stationary
-    if (y < previousFrameYPosition)                                // Hitbox is lower than before
+    if (y position < previousFrame)                                // Hitbox is lower than before
     {
       set isRising to false
       set isFalling to true
