@@ -300,7 +300,7 @@ define evaluateAndResolveWallCollisions()
 	// Determine whether the probe is touching a wall and if so, revert the action
 	if (hasTouchedBrown = true)                                      // The probe is in a wall
     {
-      set x to savedX                                    // Revert the hitbox to its previous horizontal position
+      set x position to savedX                                    // Revert the hitbox to its previous horizontal position
       set horizontalPixelsToMoveThisFrame to 0                     // Reset this variable to 0 for use in the next frame
     }
 	
@@ -313,7 +313,7 @@ define evaluateAndResolveWallCollisions()
 	// Determine whether the probe is touching a wall and if so, revert the action
 	if (hasTouchedBrown = true)                                // The probe is in a wall
     {
-      set x to savedX                                              // Revert the hitbox to its previous horizontal position
+      set x position to savedX                                              // Revert the hitbox to its previous horizontal position
       set horizontalPixelsToMoveThisFrame to 0                     // Reset this variable to 0 for use in the next frame
     }	
   }
