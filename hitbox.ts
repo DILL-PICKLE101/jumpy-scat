@@ -143,11 +143,11 @@ define evaluateFloorAndCeilingCollisions()
   
   // CEILING
   // Determine where to put the Probe on top of the hitbox and save the results in variables that we will use in a bit
-  set probeY to (y + round(hitboxHeight ÷ 2) + 1)                  // This puts the probe sprite just above the top
+  set probeY to (y position + round(hitboxHeight ÷ 2) + 1)                  // This puts the probe sprite just above the top
                                                                    // edge of the hitbox
                                                                    // (Half the distance from the center of the hitbox)
     
-  set probeX to (x - (round(hitboxWidth ÷ 2)))                     // Left side
+  set probeX to (x position - (round(hitboxWidth ÷ 2)))                     // Left side
   
   // Top-left
   // Now that we know where to put the probe, execute the probe movement
@@ -281,7 +281,7 @@ define evaluateAndResolveWallCollisions()
   if (not(horizontalPixelsToMoveThisFrame = 0))                    // Hitbox is trying to move horizontally 
   {
     // Determine where to put the probe on the X axis and save the results in variables that we will execute on in a bit
-    set probeX to (x - round(hitboxWidth ÷ 2) - 1)                 // This puts the probe sprite just outside the left edge
+    set probeX to (x position - round(hitboxWidth ÷ 2) - 1)                 // This puts the probe sprite just outside the left edge
                                                                    // of the hitbox
                                                                    // (Half the distance from the center of the hitbox)
                                                                    // This works if the hitbox is trying to go to
@@ -292,7 +292,7 @@ define evaluateAndResolveWallCollisions()
     }
 
     // Determine where to put the probe on the bottom of the hitbox
-    set probeY to (y - round(hitboxHeight ÷ 2))                    // This will put the probe at the bottom of the hitbox
+    set probeY to (y position - round(hitboxHeight ÷ 2))                    // This will put the probe at the bottom of the hitbox
 
     // Now that we know where to put the probe, execute the probe movement
     broadcast moveProbe and wait                                   // Move the probe sprite to where we want it
@@ -300,7 +300,7 @@ define evaluateAndResolveWallCollisions()
 	// Determine whether the probe is touching a wall and if so, revert the action
 	if (hasTouchedBrown = true)                                      // The probe is in a wall
     {
-      set x of Hitbox to savedX                                    // Revert the hitbox to its previous horizontal position
+      set x to savedX                                    // Revert the hitbox to its previous horizontal position
       set horizontalPixelsToMoveThisFrame to 0                     // Reset this variable to 0 for use in the next frame
     }
 	
